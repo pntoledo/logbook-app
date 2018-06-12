@@ -23,5 +23,20 @@ public class NoteTest {
 
 
     }
+    @Test
+    public void NotieneResumenNota() {
 
+        // Arrange
+        String nota = "esta es una nota";
+
+        // Act
+        Note note = new Note();
+        note.setContent(nota);
+        String result = note.getSummary();
+        Integer largo = result.length();
+        // Assert
+        assertEquals(new Integer(16), largo);
+
+
+    }
 }
